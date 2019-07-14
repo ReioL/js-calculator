@@ -1,0 +1,68 @@
+* {
+  box-sizing:border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  user-select: none
+}
+
+#root{
+  height:100vh;
+  display:flex;
+  flex-direction: column;
+  align-content: center; /*not needed I think*/
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(22, 160, 133);
+}
+
+#app {
+  height:300px;
+  width:400px;
+  background-color: white;
+  border: 3px solid black;
+}
+
+#display {
+  height:44px;
+  width:100%;
+  font-size: 30px;
+  overflow: auto;    
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+#calculator {
+  background-color: rgb(22, 160, 133);
+  height:250px;
+  width:100%;
+  display:flex;
+  flex-wrap:wrap;
+  
+}
+
+.element {
+  border-style: solid;
+  border-color: black;
+  border-width: 0.1px;
+  /*flex: 1 0 25%; doesn't work with line-height */
+  width: 98.5px;
+  height: 50px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 150%;
+  
+  
+}
+.element:not(#empty):hover {
+  border-color: grey;
+  border-width: 3px;
+  cursor: pointer;
+}
+
+#clear, #equals{
+  flex: 1 0 50%;
+}
